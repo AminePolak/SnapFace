@@ -6,5 +6,9 @@ export const routes: Routes = [
         path: 'facesnaps',
         loadChildren: () => import('./routes/face-snap-routes').then(m => m.FACE_SNAP_ROUTES)
     },
-    { path: '', component: LandingPageComponent }
+    {
+        path: 'auth',
+        loadChildren: () => import('./auth/auth-routes').then(m => m.AUTH_ROUTES)
+    },
+    { path: '', component: LandingPageComponent },
 ];
